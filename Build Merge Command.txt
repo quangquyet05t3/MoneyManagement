@@ -1,0 +1,5 @@
+copy "$(TargetDir)$(TargetFileName)" "$(TargetDir)Temp.exe"
+$(ProjectDir)Build\ilmerge.exe /out:"$(TargetDir)$(TargetFileName)" "$(TargetDir)Temp.exe" "$(TargetDir)Language.dll"
+del "$(TargetDir)Temp.exe"
+del "$(TargetDir)Language.dll"
+del "$(TargetDir)Language.pdb"
